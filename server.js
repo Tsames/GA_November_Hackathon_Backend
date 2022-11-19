@@ -7,6 +7,7 @@ const cors = require("cors");
 const bodyParser = require('body-parser');
 const PostRouter = require('./controllers/posts');
 const UserRouter = require('./controllers/users');
+const MessageRouter = require('./controllers/messages');
 
 // ---------- Short-hand Variables ----------
 
@@ -28,6 +29,8 @@ app.use(cors({
 app.use("/posts", PostRouter)
 
 app.use("/users", UserRouter)
+
+app.use("/messages", MessageRouter)
 
 // ---------- Server Listener ----------
 
